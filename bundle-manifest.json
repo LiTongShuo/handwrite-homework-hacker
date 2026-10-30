@@ -1,0 +1,233 @@
+{
+  "name": "notability-notes",
+  "format": 1,
+  "upstream_commit": "634cf07987a9c84c59f808e03f879c9d93485374",
+  "asset_restoration": "assets/asset-sources.json",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 312,
+      "sha256": "f8ec4744a36a08a94dc9de3eee760cd930ef178e9f1b37116238d1995a2c17ee"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 329,
+      "sha256": "3510a85d62a55b65ad8c0312ef5e05998fe004e4c1c3787534721c61261add29"
+    },
+    {
+      "path": "assets/asset-sources.json",
+      "bytes": 1451,
+      "sha256": "e63668c2b9a024b8eba2747abf27b79294326bc7bfdf64783a0b72a4b2e9f938"
+    },
+    {
+      "path": "assets/config.json",
+      "bytes": 1406,
+      "sha256": "b739e984e21634b2c7335af556ec71648be6f09441137a23177d69bcc8a02113"
+    },
+    {
+      "path": "assets/fonts/DejaVuSerif-Italic.ttf",
+      "bytes": 345612,
+      "sha256": "3e7994fbc54fa10ce3352a42d548fadd7d9cadb69cb1109bc9d960f6dac57f04"
+    },
+    {
+      "path": "assets/fonts/DejaVuSerif.ttf",
+      "bytes": 379740,
+      "sha256": "107244956e9962b9e96faccdc551825e0ae0898ae13737133e1b921a2fd35ffa"
+    },
+    {
+      "path": "assets/fonts/LICENSE_DEJAVU",
+      "bytes": 4816,
+      "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e"
+    },
+    {
+      "path": "assets/notability-template.png",
+      "bytes": 1097838,
+      "sha256": "7399038fa89ed3096dc4676a778fdc0121b0b4a5333abf1a18ed5afd3cfc6c8f"
+    },
+    {
+      "path": "examples/basic.md",
+      "bytes": 305,
+      "sha256": "a5813076345513fdb588a0881003055b49e11df6e8f91b50e80543700dabbbcd"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1088,
+      "sha256": "c0765a4f125c19c0ec6f53949c8f9f007ff23c7781098e3389686c4a76927906"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4434,
+      "sha256": "0fc4550d456c77c7fb9445d2300830ce67f8b149c70e6203480a1e9b207cabcd"
+    },
+    {
+      "path": "references/example.md",
+      "bytes": 1270,
+      "sha256": "7b7782ae5c172fc4122966b9e9536a2d6b22be346969948b100ffe7ad12df952"
+    },
+    {
+      "path": "references/plot-schema.md",
+      "bytes": 4238,
+      "sha256": "17816fdd94aae590e1eecb99c23f6f00a310ac2fdf5ad03e46fb66c5947f1bfe"
+    },
+    {
+      "path": "references/runtime.md",
+      "bytes": 3205,
+      "sha256": "6ea0cd0e7de2e194474fbd9d3eaf3aa733f44094299a18205bd2ced67a556ba2"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 129,
+      "sha256": "3bde9318b48ecadccb331eb28f700bff36c89a7c25886d5d500482a159e5f03c"
+    },
+    {
+      "path": "scripts/bootstrap.ps1",
+      "bytes": 1893,
+      "sha256": "3c43e7d725e3c7201f9b0f75353cb9cb5b833390c0a1484fefabad4608b62201"
+    },
+    {
+      "path": "scripts/bootstrap.sh",
+      "bytes": 1144,
+      "sha256": "f2adb86b449220efa4e731b5eee3c6dca74aeba58e9222d9d95b34c810e00d6d"
+    },
+    {
+      "path": "scripts/doctor.py",
+      "bytes": 1609,
+      "sha256": "a04093e2afba74f0a6ba30a584ef600514fc92f70a90d58e70e4b410819ae2af"
+    },
+    {
+      "path": "scripts/plot_diagrams.py",
+      "bytes": 17682,
+      "sha256": "dcef703dda4462373ddbf807bf8d809617f556e2cbf0dc6339724a8a5b96a8d8"
+    },
+    {
+      "path": "scripts/render_notes.py",
+      "bytes": 24185,
+      "sha256": "493bb75d218cc451ba0dac5296e2a16d88067ace66a69aa8a260dd1ed5c4922e"
+    },
+    {
+      "path": "scripts/restore_assets.py",
+      "bytes": 2242,
+      "sha256": "f48f83c804dbf9f189de8e685b224d54b82d1497c4c320696fef3d865d89795e"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 4521,
+      "sha256": "3e2b3486222192f2857b2bc9104d53b3c47e1affae956d0bdebc6fadeff63784"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1174,
+      "sha256": "f88a8193013e6e1ad841b7baa2b3364c37a87c85f1c0f03e6df7325e2182d1ab"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/ASSET_LICENSES.md",
+      "bytes": 835,
+      "sha256": "0462b5d3271c2598b93dd62893d571eb07387707d860061ff6f97840322e4d3f"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/LICENSE",
+      "bytes": 1083,
+      "sha256": "114e482cf18b6dd374c6305ae0a24d9939f84ba545eff73606a6e6aeee4d23d9"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/__init__.py",
+      "bytes": 443,
+      "sha256": "59b44e644a35824a9c7ceb457dab5048a0116ed8fb9d6434a4e65d901608512f"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/__main__.py",
+      "bytes": 87,
+      "sha256": "fd860037dd55b06637cd907eaf6efa4ba12f072e134d3393d8bde0e390758626"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/assets/README.md",
+      "bytes": 321,
+      "sha256": "fcc9b28379420fd9567363772e5ed4ecde4cf1209e5b90a23a4ddcbc1e7dd6e2"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/cli.py",
+      "bytes": 3878,
+      "sha256": "1507a2fa5e387337c09bdcaca2dd1a54356f6bbbd2e10f19b04db9c3de056ac1"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/config.py",
+      "bytes": 11500,
+      "sha256": "c3877543c4446eadaafb7d29bd0dc42528a05f75a62ca0c28fc7cfcad9ada6a9"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/handwriting.py",
+      "bytes": 45327,
+      "sha256": "12cecc29cb592effbf11c03b354b0d7d76f2ff124d928230b38104674ee49518"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/latex_text.py",
+      "bytes": 2605,
+      "sha256": "f8fd557dc679cf59034e6eb66b15a80f7f6857d705b6047ec264dd2a0b9581b2"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/markdown_parser.py",
+      "bytes": 16844,
+      "sha256": "dfc3dc56b7263c7b10544781cf87e86b58ed0c1d033bf7d4b870da5e63f02634"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/math_renderer.py",
+      "bytes": 64784,
+      "sha256": "223add4d93e574882fcbad56b987e68ebca61aba1990f5e698b8b6b8df692749"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/renderer.py",
+      "bytes": 41342,
+      "sha256": "fc6734712bbd1c1656813ebf23832156bf035c1f72ff80df515e5bb2b65daead"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/sdt_renderer.py",
+      "bytes": 14754,
+      "sha256": "751f4f477a334b46322e9c9ac70adb7ccdf452c9913f46a2ee373998939523fb"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/typography.py",
+      "bytes": 1119,
+      "sha256": "ac9539e3917ee23685f5210d4e17acd009ab658d2dd8eef49846868f666e33db"
+    },
+    {
+      "path": "vendor/MarkdownToHandwrite/src/markdown_to_handwrite/web.py",
+      "bytes": 30338,
+      "sha256": "ecda43979a34983dc931cfb43a9ac74e89f984312563a0f0187fb23c0e91214c"
+    },
+    {
+      "path": "wheelhouse/charset_normalizer-3.5.2-cp312-cp312-win_amd64.whl",
+      "bytes": 207486,
+      "sha256": "780fbe7cab297b81dad9fb8dc5eb003c0468ffb0d9e5f65068c53a34661a96bc"
+    },
+    {
+      "path": "wheelhouse/markdown_it_py-4.2.0-py3-none-any.whl",
+      "bytes": 91687,
+      "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a"
+    },
+    {
+      "path": "wheelhouse/mdit_py_plugins-0.6.1-py3-none-any.whl",
+      "bytes": 66663,
+      "sha256": "214c82fb2ac524472ab6a5bcab1de80f73b50443e187f401bfd77efbc7c6481d"
+    },
+    {
+      "path": "wheelhouse/mdurl-0.1.2-py3-none-any.whl",
+      "bytes": 9979,
+      "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"
+    },
+    {
+      "path": "wheelhouse/numpy-2.5.4-cp312-cp312-win_amd64.whl",
+      "bytes": 12573091,
+      "sha256": "a7b1b6353e36a7e50de2973a38d705c88ee93adcf120673cee7f45a4a3fa223a"
+    },
+    {
+      "path": "wheelhouse/pillow-10.4.0-cp312-cp312-win_amd64.whl",
+      "bytes": 2554951,
+      "sha256": "1d846aea995ad352d4bdcc847535bd56e0fd88d36829d2c90be880ef1ee4668a"
+    },
+    {
+      "path": "wheelhouse/reportlab-5.1.0-py3-none-any.whl",
+      "bytes": 2018647,
+      "sha256": "59fdbaec5efe437095ad1d7292ec9a271c8ca2d3ec75e889c6e61400929b90df"
+    }
+  ]
+}

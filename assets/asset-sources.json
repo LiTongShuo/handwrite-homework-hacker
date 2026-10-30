@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/lyc07/MarkdownToHandwrite",
+  "commit": "634cf07987a9c84c59f808e03f879c9d93485374",
+  "assets": [
+    {
+      "path": "font/1_SDT.ttf",
+      "url": "https://raw.githubusercontent.com/lyc07/MarkdownToHandwrite/634cf07987a9c84c59f808e03f879c9d93485374/font/1_SDT.ttf",
+      "sha256": "f5eb1e470645d5861d4ccd8176bd8d95129366e52471e7f04040556e90f970b8",
+      "bytes": 5052608
+    },
+    {
+      "path": "font/AnJingChenYingBiXingShu-2.ttf",
+      "url": "https://raw.githubusercontent.com/lyc07/MarkdownToHandwrite/634cf07987a9c84c59f808e03f879c9d93485374/font/AnJingChenYingBiXingShu-2.ttf",
+      "sha256": "8ef1e85507550bbb0dce7325f81ee44fcbc8f8c78de70300f399697f7615658b",
+      "bytes": 4965684
+    },
+    {
+      "path": "font/PingFangShaoHuaTi-2.ttf",
+      "url": "https://raw.githubusercontent.com/lyc07/MarkdownToHandwrite/634cf07987a9c84c59f808e03f879c9d93485374/font/PingFangShaoHuaTi-2.ttf",
+      "sha256": "ddc471de90cc10f971d118c6fb426e507d7795d963afec3019e4d510c1d8bc08",
+      "bytes": 3284632
+    },
+    {
+      "path": "src/markdown_to_handwrite/assets/sdt_trajectories.zip",
+      "url": "https://raw.githubusercontent.com/lyc07/MarkdownToHandwrite/634cf07987a9c84c59f808e03f879c9d93485374/src/markdown_to_handwrite/assets/sdt_trajectories.zip",
+      "sha256": "2dab19786696d02654d990931b8410f7ed64d34cc7252f405b2e50f0f30a3b53",
+      "bytes": 5896642
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+numpy==2.5.4
+pillow==10.4.0
+markdown-it-py==4.2.0
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+reportlab==5.1.0
+charset-normalizer==3.5.2

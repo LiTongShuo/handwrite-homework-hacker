@@ -1,0 +1,52 @@
+{
+  "page": {
+    "width_mm": 327.2366666667,
+    "height_mm": 228.3883333333,
+    "dpi": 720,
+    "margin_top_mm": 28.1516666667,
+    "margin_bottom_mm": 15.4516666667,
+    "margin_left_mm": 95.6733333333,
+    "margin_right_mm": 95.6733333333
+  },
+  "background": {
+    "style": "image",
+    "image": "notability-template.png",
+    "auto_discover": false,
+    "paper_color": "#ffffff",
+    "draw_margin_line": false
+  },
+  "handwriting": {
+    "body_font_pt": 6.6,
+    "math_font_pt": 6.9,
+    "h2_font_pt": 6.9,
+    "line_spacing": 1.1,
+    "ink_color": "#306bcc",
+    "word_spacing_px": -0.5,
+    "sdt_stroke_width": 10,
+    "sdt_supersample": 2,
+    "sdt_width_jitter": 0.1,
+    "sdt_coordinate_jitter": 0.45,
+    "perturb_theta_sigma": 0.009,
+    "elastic_strength_ratio": 0.003,
+    "math_rule_tilt_ratio": 0.012,
+    "math_rule_wobble_ratio": 0.008,
+    "math_rule_jitter_ratio": 0.012,
+    "dry_brush_probability": 0.025,
+    "seed": 20261030,
+    "h1_font_pt": 6.9,
+    "h3_font_pt": 6.9
+  },
+  "layout": {
+    "number_sections": false,
+    "first_line_indent_em": 0,
+    "paragraph_gap_mm": 0.25,
+    "heading_gap_before_mm": 1,
+    "heading_gap_after_mm": 0.35,
+    "formula_gap_mm": 0.2,
+    "table_gap_mm": 0.4,
+    "table_cell_padding_mm": 0.25,
+    "justify_paragraphs": false,
+    "show_page_numbers": false,
+    "footer_gap_mm": 0
+  }
+}

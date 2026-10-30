@@ -1,0 +1,4 @@
+interface:
+  display_name: "Notability 极简手写图"
+  short_description: "将文字与公式制成蓝色极简手写双栏图片，含模板和离线渲染依赖"
+  default_prompt: "使用 $notability-notes，将以下内容整理为极简蓝色手写笔记图片：公式左对齐并缩进两字，图形为标准黑色。"

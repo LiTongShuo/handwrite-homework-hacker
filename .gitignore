@@ -1,0 +1,15 @@
+.venv/
+.notability-venv/
+.work/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+/output/
+*.log
+*.part
+# Restored upstream assets are not cleared for redistribution.
+/vendor/MarkdownToHandwrite/font/
+/vendor/MarkdownToHandwrite/src/markdown_to_handwrite/assets/sdt_trajectories.zip
