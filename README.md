@@ -1,6 +1,7 @@
 # Handwrite Homework Hacker · 手写作业扫荡机
 
 > 本项目基于 lyc07/MarkdownToHandwrite
+> 
 > 一键扫荡大学作业
 
 高数、概率论、信号与系统……算完还得再抄一遍？把整理好的文字、公式和 Markdown 喂进来，蓝色手写、双栏排版、高清 PNG 一条龙。
