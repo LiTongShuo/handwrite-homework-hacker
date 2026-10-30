@@ -1,4 +1,4 @@
-# Notability 极简手写笔记
+# Handwrite Homework Hacker · 手写作业扫荡机
 
 > 一键扫荡大学作业。手腕可以下班，作业不能停产。
 
@@ -23,8 +23,8 @@
 需要 **64 位 CPython 3.12**。仓库附带 Windows x64 / CPython 3.12 的离线依赖包；首次配置仍需联网获取经哈希校验的上游字体和笔迹资产，或从已有上游项目离线恢复。
 
 ```powershell
-git clone https://github.com/LiTongShuo/notability-notes.git
-cd notability-notes
+git clone https://github.com/LiTongShuo/handwrite-homework-hacker.git
+cd handwrite-homework-hacker
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\bootstrap.ps1 -WorkDir .\.work
 & .\.work\.notability-venv\Scripts\python.exe .\scripts\render_notes.py --input .\examples\basic.md --output-dir .\.work\output
 ```
@@ -35,13 +35,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\bootstrap.ps1 -Wor
 
 ## 在 Codex 中使用
 
-将整个仓库放入 Codex 的 `notability-notes` 技能目录，保留 [SKILL.md](SKILL.md)、脚本、模板与依赖文件。Windows 用户级安装示例：
+将整个仓库放入 Codex 的 `handwrite-homework-hacker` 技能目录，保留 [SKILL.md](SKILL.md)、脚本、模板与依赖文件。Windows 用户级安装示例：
 
 ```powershell
-git clone https://github.com/LiTongShuo/notability-notes.git "$env:USERPROFILE\.codex\skills\notability-notes"
+git clone https://github.com/LiTongShuo/handwrite-homework-hacker.git "$env:USERPROFILE\.codex\skills\handwrite-homework-hacker"
 ```
 
-随后可提供文字或截图，并说明“使用 notability-notes 制作蓝色双栏手写笔记”。截图内容由使用技能的模型辨读和整理，渲染脚本本身不执行 OCR。
+随后可提供文字或截图，并说明“使用 handwrite-homework-hacker 制作蓝色双栏手写笔记”。截图内容由使用技能的模型辨读和整理，渲染脚本本身不执行 OCR。
 
 ## 数学图与版式
 

@@ -1,5 +1,5 @@
 {
-  "name": "notability-notes",
+  "name": "handwrite-homework-hacker",
   "format": 1,
   "upstream_commit": "634cf07987a9c84c59f808e03f879c9d93485374",
   "asset_restoration": "assets/asset-sources.json",
@@ -11,8 +11,8 @@
     },
     {
       "path": "agents/openai.yaml",
-      "bytes": 329,
-      "sha256": "3510a85d62a55b65ad8c0312ef5e05998fe004e4c1c3787534721c61261add29"
+      "bytes": 333,
+      "sha256": "1323cfae0736204b69d80d15ba582d760509879d1146bc9bb7ac29a7ae52d4c8"
     },
     {
       "path": "assets/asset-sources.json",
@@ -56,8 +56,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4840,
-      "sha256": "57e06198b155eb16ed4b9883d25335b6642e77744a8cfc45e32d6987d4a658a3"
+      "bytes": 4915,
+      "sha256": "5a823b51b327be091c64d974e97c95f3607155b8cd3413af2b7c24e8a0571f53"
     },
     {
       "path": "references/example.md",
@@ -111,8 +111,8 @@
     },
     {
       "path": "SKILL.md",
-      "bytes": 4521,
-      "sha256": "3e2b3486222192f2857b2bc9104d53b3c47e1affae956d0bdebc6fadeff63784"
+      "bytes": 4554,
+      "sha256": "33226122260af10d9ec015843ee170ad0060235b76e8017dca5374e469edc19e"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",

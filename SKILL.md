@@ -1,9 +1,9 @@
 ---
-name: notability-notes
+name: handwrite-homework-hacker
 description: "将用户提供的文字、公式、Markdown 或截图内容制作成 Notability 风格的极简蓝色手写 PNG，支持双栏排版、无框表格和标准黑色数学图。用户要求 Notability 模板、同款手写笔记图或调用本技能时使用；不用于签名仿写或普通 Word/PDF 排版。"
 ---
 
-# Notability 极简手写图
+# Handwrite Homework Hacker · 手写作业扫荡机
 
 目标：给出内容即可制作图片。使用内置模板及确定性渲染器，不依赖原项目、原题号或原截图。交付 PNG 原图和会话内预览。
 
