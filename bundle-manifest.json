@@ -10,19 +10,44 @@
       "sha256": "f8ec4744a36a08a94dc9de3eee760cd930ef178e9f1b37116238d1995a2c17ee"
     },
     {
+      "path": "LICENSE",
+      "bytes": 1088,
+      "sha256": "c0765a4f125c19c0ec6f53949c8f9f007ff23c7781098e3389686c4a76927906"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5567,
+      "sha256": "8c194ffdefcd13e533767ffa8ea6d80c180984cbb1c3b4895f53512750f2e362"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 4926,
+      "sha256": "114bd66889ce51bae9631dcedd39048e0f443ee2985e4be84bb49bb89d68169d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1400,
+      "sha256": "3f04fa55fc6ad608708f79dcb4114971bf01a232e91892115902b5e02c1ccd45"
+    },
+    {
       "path": "agents/openai.yaml",
       "bytes": 333,
       "sha256": "1323cfae0736204b69d80d15ba582d760509879d1146bc9bb7ac29a7ae52d4c8"
     },
     {
       "path": "assets/asset-sources.json",
-      "bytes": 1451,
-      "sha256": "e63668c2b9a024b8eba2747abf27b79294326bc7bfdf64783a0b72a4b2e9f938"
+      "bytes": 1868,
+      "sha256": "2be88c9fe6b0ce225051d96a854d89918385e1ea51bb74b0c21d0c67ae186d5b"
     },
     {
       "path": "assets/config.json",
       "bytes": 1406,
       "sha256": "b739e984e21634b2c7335af556ec71648be6f09441137a23177d69bcc8a02113"
+    },
+    {
+      "path": "assets/fonts/2_APHandwriting.ttf",
+      "bytes": 4187412,
+      "sha256": "f5141fccddf4defee0a7bcaa7ccefdf74e30573a4d3b50397e02aad2a7bb5ab1"
     },
     {
       "path": "assets/fonts/DejaVuSerif-Italic.ttf",
@@ -50,16 +75,6 @@
       "sha256": "a5813076345513fdb588a0881003055b49e11df6e8f91b50e80543700dabbbcd"
     },
     {
-      "path": "LICENSE",
-      "bytes": 1088,
-      "sha256": "c0765a4f125c19c0ec6f53949c8f9f007ff23c7781098e3389686c4a76927906"
-    },
-    {
-      "path": "README.md",
-      "bytes": 4777,
-      "sha256": "4128e4e22a3c9df8b37f80ffcc6f844d53db66b13c55fab8948bc6992a507d20"
-    },
-    {
       "path": "references/example.md",
       "bytes": 1270,
       "sha256": "7b7782ae5c172fc4122966b9e9536a2d6b22be346969948b100ffe7ad12df952"
@@ -71,8 +86,8 @@
     },
     {
       "path": "references/runtime.md",
-      "bytes": 3205,
-      "sha256": "6ea0cd0e7de2e194474fbd9d3eaf3aa733f44094299a18205bd2ced67a556ba2"
+      "bytes": 5133,
+      "sha256": "99e4affc7007eb06fe95b397ae32139b014953995ab328215ce0874aa84e7479"
     },
     {
       "path": "requirements.txt",
@@ -91,8 +106,13 @@
     },
     {
       "path": "scripts/doctor.py",
-      "bytes": 1609,
-      "sha256": "a04093e2afba74f0a6ba30a584ef600514fc92f70a90d58e70e4b410819ae2af"
+      "bytes": 2046,
+      "sha256": "fc3dd39f841a5158857e6e750b3d08f239f6398a19cb4b5eaed42c2322d4a487"
+    },
+    {
+      "path": "scripts/font_mixing.py",
+      "bytes": 8991,
+      "sha256": "bc52eda39a2aa1dd10117df84a442f63680e56799a6c9676d7013a9702077aab"
     },
     {
       "path": "scripts/plot_diagrams.py",
@@ -101,23 +121,13 @@
     },
     {
       "path": "scripts/render_notes.py",
-      "bytes": 24185,
-      "sha256": "493bb75d218cc451ba0dac5296e2a16d88067ace66a69aa8a260dd1ed5c4922e"
+      "bytes": 24858,
+      "sha256": "e881b21ae99b2f288bcd9d80cc8999d367717cc5c5494ef05ac5909a3ac31c27"
     },
     {
       "path": "scripts/restore_assets.py",
-      "bytes": 2242,
-      "sha256": "f48f83c804dbf9f189de8e685b224d54b82d1497c4c320696fef3d865d89795e"
-    },
-    {
-      "path": "SKILL.md",
-      "bytes": 4554,
-      "sha256": "33226122260af10d9ec015843ee170ad0060235b76e8017dca5374e469edc19e"
-    },
-    {
-      "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 1174,
-      "sha256": "f88a8193013e6e1ad841b7baa2b3364c37a87c85f1c0f03e6df7325e2182d1ab"
+      "bytes": 2556,
+      "sha256": "1cc5db58672c74277740df1c0b8922752d6d78a2744d4463dc0463653e757675"
     },
     {
       "path": "vendor/MarkdownToHandwrite/ASSET_LICENSES.md",

@@ -1,6 +1,16 @@
 {
   "repository": "https://github.com/lyc07/MarkdownToHandwrite",
   "commit": "634cf07987a9c84c59f808e03f879c9d93485374",
+  "bundled_user_assets": [
+    {
+      "path": "assets/fonts/2_APHandwriting.ttf",
+      "display_name": "AP 手写",
+      "source": "User-provided ap字体.ttf; renamed to the numbered font convention",
+      "license": "User-provided personal asset; no open-source license supplied",
+      "sha256": "f5141fccddf4defee0a7bcaa7ccefdf74e30573a4d3b50397e02aad2a7bb5ab1",
+      "bytes": 4187412
+    }
+  ],
   "assets": [
     {
       "path": "font/1_SDT.ttf",

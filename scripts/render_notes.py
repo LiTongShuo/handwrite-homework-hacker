@@ -33,6 +33,7 @@ from markdown_to_handwrite.math_renderer import (
 )
 from markdown_to_handwrite.renderer import ReportRenderer
 from markdown_to_handwrite.typography import westernize_punctuation
+from font_mixing import MixedFontEngine
 
 
 def enable_unboxed_commands():
@@ -121,7 +122,7 @@ class LeftFormulaRenderer(FormulaRenderer):
 class NotesRenderer(ReportRenderer):
     """Cache actual block rasters for an exact measure/plan/draw workflow."""
 
-    def __init__(self, config, base_dir, columns):
+    def __init__(self, config, base_dir, columns, font_mode="mixed", new_font_path=None):
         enable_unboxed_commands()
         self.measuring = True
         self.active_token = "init"
@@ -131,6 +132,8 @@ class NotesRenderer(ReportRenderer):
         self.table_width_override = None
         self.warnings = []
         super().__init__(config, base_dir)
+        if font_mode == "mixed":
+            self.engine = MixedFontEngine(config.handwriting, self.engine, self.dpi, new_font_path)
         self.formula_renderer = LeftFormulaRenderer(self.engine, seed=config.handwriting.seed)
         self.paper_left = self.margin_left
         self.paper_bottom = self.bottom_limit
@@ -181,12 +184,12 @@ class NotesRenderer(ReportRenderer):
         return 2 * pt_to_px(self.config.handwriting.body_font_pt, self.dpi)
 
     def _render_formula_image(self, text, seed_extra):
-        key = (text, self.content_w, self.config.handwriting.math_font_pt)
+        key = (self.active_token, text, self.content_w, self.config.handwriting.math_font_pt)
         if key not in self.formula_cache:
             self.formula_cache[key] = self.formula_renderer.render(
                 text, pt_to_px(self.config.handwriting.math_font_pt, self.dpi),
                 max(1, self.content_w - self._formula_indent() - mm_to_px(1, self.dpi)),
-                seed_extra=f"formula:{hashlib.sha256(text.encode()).hexdigest()[:16]}",
+                seed_extra=f"{self.active_token}:formula:{hashlib.sha256(text.encode()).hexdigest()[:16]}",
             )
         return self.formula_cache[key]
 
@@ -454,6 +457,8 @@ def make_config(args):
     hw.ink_color = "#306BCC"
     hw.word_spacing_px = -0.5 * args.dpi / 240
     hw.sdt_supersample = 2
+    if args.seed is not None:
+        hw.seed = args.seed
     layout.first_line_indent_em = 0
     layout.paragraph_gap_mm = 0.25
     layout.heading_gap_before_mm = 1.0
@@ -479,6 +484,9 @@ def main(argv=None):
     parser.add_argument("--split-heading")
     parser.add_argument("--font-size", type=float, default=6.6)
     parser.add_argument("--config", type=Path)
+    parser.add_argument("--font-mode", choices=("mixed", "old"), default="mixed")
+    parser.add_argument("--new-font", type=Path)
+    parser.add_argument("--seed", type=int)
     args = parser.parse_args(argv)
     if not 96 <= args.dpi <= 1200:
         parser.error("--dpi must be between 96 and 1200")
@@ -490,7 +498,7 @@ def main(argv=None):
         raise ValueError("The input Markdown is empty.")
     validate_source(source)
     segments = source_segments(source, args.split_heading)
-    renderer = NotesRenderer(make_config(args), input_path.parent, args.columns)
+    renderer = NotesRenderer(make_config(args), input_path.parent, args.columns, args.font_mode, args.new_font)
     if not renderer.engine.uses_sdt_trajectories:
         raise RuntimeError("SDT trajectories are missing; complete the skill bootstrap first.")
     plan = []
@@ -533,6 +541,8 @@ def main(argv=None):
         result["images"].append({"file": filename, "preview": preview_name,
                                   "width": renderer.page_w, "height": renderer.page_h, "columns": geometry})
         print(f"Saved {filename} ({renderer.page_w}x{renderer.page_h})", flush=True)
+    result["font_mixing"] = (renderer.engine.diagnostics() if isinstance(renderer.engine, MixedFontEngine)
+                             else {"mode": "old"})
     (output / "manifest.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Manifest: {output / 'manifest.json'}", flush=True)
 

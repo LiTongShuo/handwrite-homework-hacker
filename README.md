@@ -11,6 +11,7 @@
 ## 效果与能力
 
 - 蓝色手写正文与公式，默认一页两栏；内容过长时自动续页。
+- 指定字符范围内逐字随机混用 AP 手写与 SDT 字体，两种字体使用同一笔宽；范围外及新字体缺字时沿用旧字体。
 - 默认导出 **9276 × 6474** 高清 PNG，并生成便于浏览的缩略预览。
 - 支持常用 LaTeX 数学子集，以及本地图片、无框表格。
 - 根据 JSON 图形描述绘制黑色坐标、曲线和数学图。
@@ -32,6 +33,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\bootstrap.ps1 -Wor
 `bootstrap.ps1` 会先创建虚拟环境，再安装锁定依赖、恢复资源并检查环境。若系统默认 Python 不是 3.12，可加 `-Python "实际的 Python 3.12 路径"`。
 
 把 `examples/basic.md` 换成自己的 Markdown 文件即可生成新笔记。输出位于 `.work/output/`。
+
+默认混排数字、英文字母、汉字和指定常用符号，新旧字体选择概率各为 50%；希腊字母及其他数学符号仍用旧字体。新字体文件为 `assets/fonts/2_APHandwriting.ttf`。完整范围与等线宽处理见[字体混排说明](references/runtime.md#默认字体混排)。
+
+使用 `--seed 20261106` 固定随机选择；需要单独使用旧字体时加 `--font-mode old`；可用 `--new-font <字体路径>` 指定另一份新字体。
 
 ## 在 Codex 中使用
 
@@ -80,6 +85,8 @@ PYTHON=python3.12 NOTABILITY_ALLOW_DOWNLOAD=1 sh scripts/bootstrap.sh .work
 ## 许可证与资源说明
 
 项目原创代码和文档采用 [MIT 许可证](LICENSE)。上游 MarkdownToHandwrite 源码保留其 [MIT 许可与版权声明](vendor/MarkdownToHandwrite/LICENSE)，DejaVu 字体保留[字体许可](assets/fonts/LICENSE_DEJAVU)。其他依赖按各自许可分发。
+
+用户提供的 AP 手写字体随仓库保存，其来源和校验值记录在资源清单中；未附开源授权，不归入项目的 MIT 许可证。
 
 上游手写字体和 SDT 轨迹没有随仓库重新分发，恢复清单记录了固定提交和 SHA-256。恢复下载不改变这些资源原有的使用与分发条款，见[第三方说明](THIRD_PARTY_NOTICES.md)及[上游资产声明](vendor/MarkdownToHandwrite/ASSET_LICENSES.md)。
 

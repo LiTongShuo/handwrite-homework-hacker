@@ -10,7 +10,9 @@
 
 ## 字体与笔迹资产
 
-字体及 SDT 轨迹的上游声明并未授予明确再分发许可，所以可分享压缩包不重发它们。`assets/asset-sources.json` 保存原仓库固定提交、URL、字节数与 SHA-256。首次 bootstrap 自动从原地址恢复并校验；本机已安装的技能缓存可直接复用。详见 `vendor/MarkdownToHandwrite/ASSET_LICENSES.md`，不能把这些资产笼统称为 MIT。
+旧字体及 SDT 轨迹的上游声明并未授予明确再分发许可，所以压缩包不重发这些上游资产。`assets/asset-sources.json` 保存原仓库固定提交、URL、字节数与 SHA-256。首次 bootstrap 自动从原地址恢复并校验；本机已安装的技能缓存可直接复用。详见 `vendor/MarkdownToHandwrite/ASSET_LICENSES.md`，不能把这些资产笼统称为 MIT。
+
+用户提供的“AP 手写”已按 `1_SDT.ttf` 的“编号_名称”格式命名为 `assets/fonts/2_APHandwriting.ttf`，随个人技能包保存。其来源、字节数和 SHA-256 记录于 `assets/asset-sources.json` 的 `bundled_user_assets`；未附开源授权，不归入代码的 MIT 许可。运行时直接读取技能内资源，不依赖原附件的绝对路径。
 
 已有原仓库时可离线恢复：
 
@@ -21,6 +23,20 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "<skill>/scripts/bootstrap.p
 本机资源路径只是可选缓存来源，不写入技能的运行依赖；没有原项目也能按固定来源恢复。
 
 资产下载仅限声明的四个字体/轨迹文件；缺失或哈希不符时停止，不使用未知替代资产。普通后续渲染无需联网。
+
+## 默认字体混排
+
+`render_notes.py` 默认启用 `--font-mode mixed`：以下范围内，每次出现的字符独立以 50% 概率选用新字体 `2_APHandwriting.ttf` 或旧字体 `1_SDT.ttf`。同一个字符在不同位置可以使用不同字体；不强制机械交替，也不要求短句刚好各半。
+
+- 数字、英文字母 `A–Z / a–z`、汉字。
+- 符号：`！ @ # ￥ % & * （ ） - = + 【 】 { } ； ： ’ “ ” 《 》 / \ _ ^ | · ~ ， 。`。
+- 上述标点经现有排版流程转换出的半角形式也包含在内。
+
+其余字符（含希腊字母和 `∫ × ≤ ≈ ∞` 等数学符号）只使用旧字体链；新字体缺字时也回退旧字体链。新字体不会被混入旧字体的兜底链。
+
+两种字体均用中心线/旧 SDT 轨迹，经同一渲染器按同一笔宽重绘。笔宽由旧字体的 `sdt_stroke_width` 和正文像素字号确定，默认 720 DPI、6.6 pt 时为 **2.578125 px**；两者共同关闭笔压宽度、收笔粗细与二次字重变化，并使用 6 倍抗锯齿。保留各自字形，不以字号缩放或单纯加粗新字体代替等线宽。
+
+`--seed <整数>` 控制可复现随机选择；省略时沿用配置中的 seed。测量和落图使用缓存与同一位置标记，重复公式在不同位置也会分别选择字体。`manifest.json` 的 `font_mixing` 记录字体名称、seed、共同笔宽、使用统计及逐字符字体统计。旧字体单独使用时加 `--font-mode old`；更换新字体时可加 `--new-font <字体路径>`。
 
 ## 其他平台
 

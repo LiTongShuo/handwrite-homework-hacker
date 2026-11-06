@@ -21,6 +21,11 @@ def main():
     parser.add_argument('--download', action='store_true')
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'assets/asset-sources.json').read_text(encoding='utf-8'))
+    for item in manifest.get('bundled_user_assets', []):
+        target = (ROOT / item['path']).resolve()
+        target.relative_to(ROOT.resolve())
+        if not verified(target, item):
+            raise FileNotFoundError(f"Missing or changed personal asset: {item['path']}. Restore it from the skill package.")
     vendor = (ROOT / 'vendor/MarkdownToHandwrite').resolve()
     restored = []
     for item in manifest['assets']:
